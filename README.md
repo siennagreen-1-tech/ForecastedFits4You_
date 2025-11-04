@@ -1,7 +1,7 @@
 # ForecastedFits4You-A2
 
 ## Table of contents
-* [General info](#general-info)
+* [Porject Overview](#project-overview)
 * [Technologies](#technologies)
 * [Setup](#setup)
 * [Technologies](#technologies)
@@ -9,21 +9,22 @@
 * [Screenshots](#screenshots)
 * [Acknowledgements](#acknowledgements)
 
-## General info
-This project prototype is a digital weather-based outfit generator, designed to help users make quicker & more weather appropriate outfit choices. Its a Python-based GUI application that displays random outfit images, both 'top' and 'bottom' clothing items, to create an outfit that suits the user's selected weather condition.
+## Project Overview
+Forecasted Fits 4 You is a digital weather-based outfit generator designed to help users make quicker, more convenient, and weather-appropriate clothing decisions. Built with Python, this prototype features a simple and interactive GUI that generates random outfit combinations based on the user’s selected weather condition. The application displays paired images of ‘top’ and ‘bottom’ clothing items, creating a complete look that aligns with the chosen forecast.
 	
 ## Technologies
 Project is created with:
-* Python version: 3.14
-* Tkinter (library for GUI)
-* Pillow (for image handling
-* OS module (for file management)
-* Random module (for selecting random images to display)
+* Python 3.14 - Core programming language
+* Tkinter - Provides the graphical user interface (GUI) framework for user interaction
+* Pillow (PIL) - Handles image processing and display
+* OS Module - Manages file paths and directory operations
+* Random Module - Selects random images to display)
 
 ## Features
-* Weather selection Buttons
-* Randomly generates 'top' & 'bottom' clothing images
-* Generates Outfits that suit selected weather conditions
+* Generates random outfit suggestions
+* Displays images from your wardrobe folder
+* Weather-based clothing recommendations
+* Simple Tkinter GUI interface
 
 ## Screenshots
 <img width="1088" height="819" alt="Screen Shot 2025-11-04 at 11 34 24 pm" src="https://github.com/user-attachments/assets/908d26f6-46b2-44e4-882c-c12b91bf7922" />
@@ -35,6 +36,7 @@ To run this project, install it locally using npm:
 
 ## Acknowledgements
 This project was inspired by the closet outfit generator from the movie 'Clueless', however i personalised the prototype by solving time constraint issues & avoiding decision fatigue when deciding outfits that are suitable for weather conditions.
+<img width="527" height="269" alt="Screen Shot 2025-11-05 at 10 25 01 am" src="https://github.com/user-attachments/assets/68bda841-58e5-454f-9802-45d4e55f4c5b" />
 
 This code in this project was laregly guided by the 'TkinterPthyon' Youtube channel tutorials.
 https://www.youtube.com/@TkinterPython
