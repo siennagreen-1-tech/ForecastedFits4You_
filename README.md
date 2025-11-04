@@ -32,7 +32,9 @@ Project is created with:
 <img width="1075" height="815" alt="Screen Shot 2025-11-04 at 11 34 45 pm" src="https://github.com/user-attachments/assets/759bbb16-0ee6-4df2-a81a-3a0dde5cda2d" />
 
 ## Setup
-To run this project, install it locally using npm:
+To run this project, here are the steps you need to follow:
+1. clone the repository, by opening your terminal and running: git clone
+2. 
 
 ## Acknowledgements
 This project was inspired by the closet outfit generator from the movie 'Clueless', however i personalised the prototype by solving time constraint issues & avoiding decision fatigue when deciding outfits that are suitable for weather conditions.
