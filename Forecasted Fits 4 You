@@ -1,0 +1,129 @@
+import tkinter as tk
+from tkinter import ttk
+from PIL import Image, ImageTk
+import random
+import os
+
+# Basic weather-based Outfit Generator GUI that displays a random top and bottom
+# Expects folders like ./summer/tops, ./summer/bottoms, ./winter/tops, ./winter/bottoms
+
+# Create the main application window, title, color and size
+root = tk.Tk()
+root.title("Forecasted Fits 4 You")
+root.geometry("1000x600")
+root.configure(bg="#ffb6c1")
+
+# Designing the Title
+title_label_frame = tk.Frame(root, bg="#d3d3d3", padx=20, pady=10, borderwidth=2, relief="groove")
+title_label_frame.pack(pady=20)
+
+# Create Buttons for weather seasons (position under the title)
+btn_frame = tk.Frame(root, bg='#f5f2f3')
+btn_frame.pack(pady=10)
+summer_btn = ttk.Button(btn_frame, text="☀️ Summer Outfit", command=lambda: show_outfit("summer"))
+summer_btn.grid(row=0, column=0, padx=10)
+winter_btn = ttk.Button(btn_frame, text="❄️ Winter Outfit", command=lambda: show_outfit("winter"))
+winter_btn.grid(row=0, column=1, padx=10)
+
+# Container for labels and images
+frame = tk.Frame(root, bg="#f5f2f3")
+frame.pack(pady=5)
+
+# Create Text labels above each randomly generated image to label their catergories (tops and bottoms)
+top_text_label = tk.Label(frame, text="tops", bg='#f5f2f3')
+top_text_label.grid(row=0, column=0, padx=10, pady=5)
+bottom_text_label = tk.Label(frame, text="bottoms", bg='#f5f2f3')
+bottom_text_label.grid(row=0, column=1, padx=10, pady=5)
+
+# Display Image labels for both catergories of the randomly selected images (start empty)
+top_image_label = tk.Label(frame, bg='#f5f2f3')
+top_image_label.grid(row=1, column=0, padx=10, pady=5)
+bottom_image_label = tk.Label(frame, bg="#f5f2f3")
+bottom_image_label.grid(row=1, column=1, padx=10, pady=5)
+
+# Function to load and display randomly selected outfit images from the appropiate (season) folders
+def show_outfit(season):
+    """Load and display a random top and a random bottom from the given season folder and display the image files side-by-side.
+
+    The project stores catergorised clothing item images under folders like:
+      <project_root>/summer/summer tops/*.jpeg
+      <project_root>/summer/summer bottoms/*.jpeg
+
+    This function looks for any folder under the season that contains 'top' or 'bottom'
+    in its name (case-insensitive), so it works with names that have spaces.
+    """
+    # create the base path to the season folder (e.g., ./summer or ./winter) 
+    base = os.getcwd()
+    season_dir = os.path.join(base, season)
+
+    # function to locate images of a given kind (top or bottom)
+    def collect_images_for_kind(kind_substring):
+        """Search season_dir subfolders for names containing kind_substring and return full image paths."""
+       
+        # Create empty list to store found image paths
+        results = []
+
+        # check if the season folder exists 
+        if not os.path.isdir(season_dir):
+            return results # return empty list if season folder doesn't exist
+        
+        # Loop through entries (subfolders) to find folders matching the kind_substring
+        for entry in os.listdir(season_dir):
+            sub = os.path.join(season_dir, entry)
+
+            # if the subfolder name contains the kind_substring, collect its images (e.g., 'top' or 'bottom')
+            if os.path.isdir(sub) and kind_substring.lower() in entry.lower():
+                
+                # Loop through files in the subfolder to find image files
+                for f in os.listdir(sub):
+                    if f.lower().endswith(('.jpeg', '.jpg', '.png')):
+                        results.append(os.path.join(sub, f))
+
+        # return the collected list of image file paths for the selected season and kind
+        return results
+
+    tops = collect_images_for_kind('top')
+    bottoms = collect_images_for_kind('bottom')
+   
+    # Check if any top or bottom images were found (if not, show message and exit)
+    if not tops and not bottoms:
+        print(f"Missing images in {season} folders! Checked: {season_dir}")
+        top_image_label.configure(text="No top found")
+        bottom_image_label.configure(text="No bottom found")
+        return
+
+    try:
+        # randomly select and display one top image in frame (if available)
+        if tops:
+            random_top = random.choice(tops)
+            top_img = Image.open(random_top)
+            top_img.thumbnail((350, 500))
+            # convert to PhotoImage so Tkinter can use it and automtically resize display
+            top_photo = ImageTk.PhotoImage(top_img) 
+            top_image_label.configure(image=top_photo, text='')
+            top_image_label.image = top_photo
+            print(f"Loaded top: {random_top}") # debug print
+        else:
+            # if no top image files found, show message
+            top_image_label.configure(image='', text='No top')
+
+            # randomly sleect and display one bottom image in beside top image in frame (if availvanle)
+        if bottoms:
+            random_bottom = random.choice(bottoms)
+            bottom_img = Image.open(random_bottom)
+            bottom_img.thumbnail((350, 500))
+            # convert to PhotoImage so Tkinter can use it and automatically resize display
+            bottom_photo = ImageTk.PhotoImage(bottom_img)
+            bottom_image_label.configure(image=bottom_photo, text='')
+            bottom_image_label.image = bottom_photo
+            print(f"Loaded bottom: {random_bottom}") #debug print
+        else:
+            # if no bottom image files found, show print message
+            bottom_image_label.configure(image='', text='No bottom')
+    except Exception as e:
+        # catch and print any errors during image loading and display
+        print("Error loading images:", e)
+
+# Run the Tkinter main loop
+if __name__ == "__main__":
+    root.mainloop()
