@@ -1,4 +1,4 @@
-# ForecastedFits4You-A2
+# ForecastedFits4You_
 
 ## Table of contents
 * [Project Overview](#project-overview)
