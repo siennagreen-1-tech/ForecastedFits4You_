@@ -9,6 +9,7 @@
 * [Usage](#Usage)
 * [Potential Project Improvements](#potential-project-improvements)
 * [Acknowledgements](#acknowledgements)
+* [Contact](#Contact) 
 
 
 ## Project Overview
@@ -67,3 +68,7 @@ Inspired by the 'Cher's Closet' generator in Clueless, this prototype moves beyo
 
 The foundational coding structure and graphical user interface (GUI) implementation for this project were developed following the guidance of the TkinterPython YouTube channel tutorials
 https://www.youtube.com/@TkinterPython
+
+## Contact
+Created by Sienna Green
+Email: sienna.green-1@student.uts.edu.au
