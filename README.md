@@ -48,8 +48,8 @@ To run this project, here are the steps you need to follow:
 7. Run project
 
 ## Acknowledgements
-This project was inspired by the closet outfit generator from the movie 'Clueless', however i personalised the prototype by solving time constraint issues & avoiding decision fatigue when deciding outfits that are suitable for weather conditions.
+Inspired by the 'Cher's Closet' generator in Clueless, this prototype moves beyond simple outfit matching. I addressed the real-world challenge of 'decision fatigue' by integrating weather condition suitability, ensuring users are presented with a climate-appropriate, ready-to-wear outfit selection.
 <img width="527" height="269" alt="Screen Shot 2025-11-05 at 10 25 01 am" src="https://github.com/user-attachments/assets/68bda841-58e5-454f-9802-45d4e55f4c5b" />
 
-This code in this project was laregly guided by the 'TkinterPthyon' Youtube channel tutorials.
+The foundational coding structure and graphical user interface (GUI) implementation for this project were developed following the guidance of the TkinterPython YouTube channel tutorials
 https://www.youtube.com/@TkinterPython
