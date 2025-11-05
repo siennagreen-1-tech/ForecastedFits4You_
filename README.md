@@ -57,7 +57,7 @@ The following steps will guide the use of the application, following the [Setup]
 3. A randomly selected outfit (consisting of a top and a bottom) will then be displayed in the application frame, ensuring it aligns with the selected weather condition.
 4. Click either button again if you wish to display another randomly generated, weather-appropriate outfit.
 
-## Potential Project Imporovements
+## Potential Project Improvements
 While the current weather-based outfit generator prototype is functional and effective, its utility and user experience could be enhanced by integrating real-time data and expanding wardrobe logic. Additions could include:
 - Implement an external API, such as the OpenWeatherMap API, to dynamically gather and sync the current weather data (e.g., temperature and condition) of the user's geographical location
 - Increase the complexity of the application's filtering logic by introducing a wider range of environmental categories, such as Rain, Snow, Windy, and Extreme Cold/Heat.
