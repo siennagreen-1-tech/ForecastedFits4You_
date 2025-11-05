@@ -4,10 +4,12 @@
 * [Porject Overview](#project-overview)
 * [Technologies](#technologies)
 * [Setup](#setup)
+* [Usage](#Usage)
 * [Technologies](#technologies)
 * [Features](#features)
 * [Screenshots](#screenshots)
 * [Acknowledgements](#acknowledgements)
+
 
 ## Project Overview
 Forecasted Fits 4 You is a digital weather-based outfit generator designed to help users make quicker, more convenient, and weather-appropriate clothing decisions. Built with Python, this prototype features a simple and interactive GUI that generates random outfit combinations based on the user’s selected weather condition. The application displays paired images of ‘top’ and ‘bottom’ clothing items, creating a complete look that aligns with the chosen forecast.
@@ -46,6 +48,18 @@ To run this project, here are the steps you need to follow:
    pip3 install pillow
 6. Install all required in-built libraries from [Technologies](#technologies)
 7. Run project
+
+## Usage
+The following steps will guide the use of the application, following the [Setup](#setup) process:
+1. Run the project to launch the GUI window
+2. Select the weather condition by clicking either the 'Summer' or 'Winnter' button.
+3. A randomly selected outfit (consisting of a top and a bottom) will then be displayed in the application frame, ensuring it aligns with the selected weather condition.
+4. Click either button again if you wish to display another randomly generated, weather-appropriate outfit.
+
+## Potential Project Imporovements
+While the current weather-based outfit generator prototype is functional and effective, its utility and user experience could be enhanced by integrating real-time data and expanding wardrobe logic. Additions could include:
+- Implement an external API, such as the OpenWeatherMap API, to dynamically gather and sync the current weather data (e.g., temperature and condition) of the user's geographical location
+- Increase the complexity of the application's filtering logic by introducing a wider range of environmental categories, such as Rain, Snow, Windy, and Extreme Cold/Heat.
 
 ## Acknowledgements
 Inspired by the 'Cher's Closet' generator in Clueless, this prototype moves beyond simple outfit matching. I addressed the real-world challenge of 'decision fatigue' by integrating weather condition suitability, ensuring users are presented with a climate-appropriate, ready-to-wear outfit selection.
