@@ -33,8 +33,19 @@ Project is created with:
 
 ## Setup
 To run this project, here are the steps you need to follow:
-1. clone the repository, by opening your terminal and running: git clone
-2. 
+1. clone the repository, by opening your terminal and running:
+   git clone https://github.com/siennagreen-1-tech/ForecastedFits4You_.git
+   cd Forecasted-Fits-4-You
+4. Check for Python Installation:
+   python --version
+   (or)
+   python3 --verison
+5. Install Pillow in terminal:
+   pip install pillow
+   (or)
+   pip3 install pillow
+6. Install all required in-built libraries from [Technologies](#technologies)
+7. Run project
 
 ## Acknowledgements
 This project was inspired by the closet outfit generator from the movie 'Clueless', however i personalised the prototype by solving time constraint issues & avoiding decision fatigue when deciding outfits that are suitable for weather conditions.
