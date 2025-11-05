@@ -1,13 +1,13 @@
 # ForecastedFits4You-A2
 
 ## Table of contents
-* [Porject Overview](#project-overview)
-* [Technologies](#technologies)
-* [Setup](#setup)
-* [Usage](#Usage)
+* [Project Overview](#project-overview)
 * [Technologies](#technologies)
 * [Features](#features)
 * [Screenshots](#screenshots)
+* [Setup](#setup)
+* [Usage](#Usage)
+* [Potential Project Improvements](#potential-project-improvements)
 * [Acknowledgements](#acknowledgements)
 
 
@@ -20,7 +20,7 @@ Project is created with:
 * Tkinter - Provides the graphical user interface (GUI) framework for user interaction
 * Pillow (PIL) - Handles image processing and display
 * OS Module - Manages file paths and directory operations
-* Random Module - Selects random images to display)
+* Random Module - (Selects random images to display)
 
 ## Features
 * Generates random outfit suggestions
