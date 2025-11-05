@@ -35,7 +35,7 @@ Project is created with:
 To run this project, here are the steps you need to follow:
 1. clone the repository, by opening your terminal and running:
    git clone https://github.com/siennagreen-1-tech/ForecastedFits4You_.git
-   cd Forecasted-Fits-4-You
+    cd Forecasted-Fits-4-You
 4. Check for Python Installation:
    python --version
    (or)
